@@ -1,6 +1,6 @@
 # Mobile App Development Company
 
-```json [services]
+```json
 {
   "services": [
     {
