@@ -1,20 +1,20 @@
 <script setup lang="ts">
-// const { data: services } = await useAsyncData('services', () => {
-//   return queryCollection('services')
-//     .order('id', 'DESC')
-//     .all()
-// })
+type Service = { id: number; title: string; description: string }
 
-const data = await useAsyncData(() => queryCollection('services')
+const { data } = await useAsyncData('services', () => {
+  return queryCollection('services').first()
+})
 
-// const { data: services } = await useAsyncData('services', () => )
+const items = computed<Service[]>(() => data.value?.services ?? [])
 </script>
 
 <template>
-<!--  <ContentRenderer v-if="services" :value="services" />-->
-  <div v-if="data">
-    {{data}}
-  </div>
+  <ul v-if="items.length">
+    <li v-for="s in items" :key="s.id">
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+    </li>
+  </ul>
 
   <div v-else>Services not found</div>
 </template>

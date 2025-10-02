@@ -6,13 +6,15 @@ export default defineContentConfig({
       type: 'page',
       source: '**/*.md'
     }),
-    authors: defineCollection({
+    services: defineCollection({
       type: 'data',
-      source: 'services/**.json',
+      source: 'services.json',
       schema: z.object({
-        id: z.string(),
-        title: z.string(),
-        description: z.string()
+        services: z.array(z.object({
+          id: z.number(),
+          title: z.string(),
+          description: z.string()
+        }))
       })
     })
   }
