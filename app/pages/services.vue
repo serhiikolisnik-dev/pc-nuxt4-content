@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const { data: services } = await useAsyncData(() => queryCollection('content').path('/services').first())
-
-useSeoMeta({
-  title: services.value?.title,
-  description: services.value?.description
+const { data: services } = await useAsyncData('services', () => {
+  return queryCollection('authors')
+    .order('id', 'DESC')
+    .all()
 })
 </script>
 
