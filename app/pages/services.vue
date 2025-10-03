@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// type Service = { id: number; title: string; description: string }
 interface IImage {
   src: string
   alt: string
@@ -11,9 +10,7 @@ interface IService {
   image: IImage
 }
 
-const { data } = await useAsyncData('services', () => {
-  return queryCollection('services').first()
-})
+const { data } = await useAsyncData('services', () => queryCollection('services').first())
 
 const items = computed<IService[]>(() => data.value?.services ?? [])
 </script>
@@ -29,3 +26,9 @@ const items = computed<IService[]>(() => data.value?.services ?? [])
 
   <div v-else>Services not found</div>
 </template>
+
+<style scoped>
+ul li img {
+  max-width: 200px;
+}
+</style>
