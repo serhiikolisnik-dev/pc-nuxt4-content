@@ -1,0 +1,25 @@
+{
+  "seoTitle": "CASES",
+  "seoDescription": "DESCRIPTION",
+  "h1Tag": "Your Project Could Be Our Next Success Story",
+  "cases": [
+    {
+      "id": 1,
+      "title": "Case long long long long name",
+      "description": "TEST <span>GIGO</span>",
+      "image": {
+        "src": "/cases/1.png",
+        "alt": "Case 1"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Case long long long long name ",
+      "description": "TEST 2 <b>EEEEE</b>",
+      "image": {
+        "src": "/cases/2.png",
+        "alt": "Case 2"
+      }
+    }
+  ]
+}

@@ -6,11 +6,14 @@ export default defineContentConfig({
       type: 'page',
       source: '**/*.md'
     }),
-    services: defineCollection({
+    cases: defineCollection({
       type: 'data',
-      source: 'services.json',
+      source: 'cases.json',
       schema: z.object({
-        services: z.array(z.object({
+        seoTitle: z.string(),
+        seoDescription: z.string(),
+        h1Tag: z.string(),
+        cases: z.array(z.object({
           id: z.number(),
           title: z.string(),
           description: z.string(),
