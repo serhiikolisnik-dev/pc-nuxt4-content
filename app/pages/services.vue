@@ -20,6 +20,7 @@ const items = computed<IService[]>(() => data.value?.services ?? [])
     <li v-for="s in items" :key="s.id">
       <h3>{{ s.title }}</h3>
       <p>{{ s.description }}</p>
+      <p v-html="s.description" />
       <NuxtImg :src="s.image.src" />
     </li>
   </ul>
