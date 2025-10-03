@@ -31,11 +31,15 @@ useSeoMeta({
   <section v-if="doc">
     <h1>{{doc.h1Tag}}</h1>
     <div class="cases">
-      <div v-for="c in items" :key="c.id">
+      <NuxtLink
+        v-for="c in items"
+        :key="c.id"
+        :to="{ name: 'cases-id', params: { id: c.id } }"
+      >
         <h3>{{ c.title }}</h3>
         <p v-html="c.description" />
         <NuxtImg :src="c.image.src" />
-      </div>
+      </NuxtLink>
     </div>
   </section>
 

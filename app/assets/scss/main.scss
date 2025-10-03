@@ -1,0 +1,13 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "reset";
+@use "fonts";
+
+body {
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  line-height: $font-line-height-base;
+  font-family: $font-family-base;
+  background-color: $background-body;
+  color: $color-body;
+}
