@@ -1,0 +1,1 @@
+import{_ as o,d as a,e as n,h as e,O as r}from"#entry";const s={},u={class:"default-layout"};function d(l,t){return n(),a("div",u,[t[0]||(t[0]=e("header",null,[e("h1",null,"Default Layout Header")],-1)),e("main",null,[r(l.$slots,"default")]),t[1]||(t[1]=e("footer",null,[e("h1",null,"Default Layout Footer")],-1))])}const _=o(s,[["render",d]]);export{_ as default};
