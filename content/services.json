@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Service 1",
-      "description": "TEST <span>highlighted</span>",
+      "description": "TEST",
       "image": {
         "src": "/services/1.jpeg",
         "alt": "Image 1"
