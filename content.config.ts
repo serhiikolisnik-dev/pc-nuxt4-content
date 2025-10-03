@@ -13,7 +13,11 @@ export default defineContentConfig({
         services: z.array(z.object({
           id: z.number(),
           title: z.string(),
-          description: z.string()
+          description: z.string(),
+          image: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
         }))
       })
     })
